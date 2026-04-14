@@ -13,8 +13,8 @@ st.markdown("Descubra quais agências lotéricas estão no raio de alcance da su
 @st.cache_data
 def load_data():
     try:
-        df_lojas = pd.read_excel("lojas.xlsx")
-        df_lotericas = pd.read_excel("lotericas.xlsx")
+        df_lojas = pd.read_excel("enderecos_com_coordenadas.xlsx")
+        df_lotericas = pd.read_excel("lotericas_enderecos_com_coordenadas.xlsx")
     except FileNotFoundError:
         st.error("⚠️ Arquivos 'lojas.xlsx' ou 'lotericas.xlsx' não encontrados na pasta.")
         st.stop()
